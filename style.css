@@ -3,7 +3,7 @@ body, html {
     width: 100vw;
     height: 100vh;
     background-color: #000;
-    background-image: url(/1_images/Neon-Lights.jpg);
+    background-image: url(Neon-Lights.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -221,4 +221,5 @@ body, html {
     body {
         width: 430px;
     }
+
 }
