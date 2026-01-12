@@ -1,0 +1,224 @@
+body, html {
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    background-image: url(/1_images/Neon-Lights.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.navbar {
+    display: flex;
+    background-color: hsla(235, 45%, 15%, 0.6);
+    align-items: center;
+    justify-content: center;
+}
+#navcontainer {
+    display: flex;
+    padding-left: 0px;  
+    list-style-type: none;
+    column-gap: 30px;
+    font-family: Verdana, Tahoma, sans-serif;
+    margin-right: auto;
+    margin-left: auto;
+}
+.navitems a{
+    text-decoration: none;
+    color: #fff;
+}
+.navitems:hover {
+    background: linear-gradient(45deg, rgb(0, 8, 255), rgb(255, 0, 242), rgb(255, 0, 72));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+#logo {
+    font-family:Impact, 'Arial Narrow Bold', sans-serif;
+    margin-left: 10px;
+    font-size: 20px;
+    letter-spacing: 4px;
+    background: linear-gradient(45deg, rgb(0, 8, 255), rgb(255, 0, 242), rgb(255, 0, 72));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 10px 10px 15px #1e00ff, -10px -10px 15px #fb00ff;
+}
+#signincontainer {
+    height: 30px;
+    width: 70px;
+    border-radius: 5px;
+    color: #fff;
+    font-family: Verdana, Tahoma, sans-serif;
+    background: linear-gradient(45deg, rgb(0, 8, 255), rgb(255, 0, 242), rgb(255, 0, 72));
+    border: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: grid;
+    grid-template-areas: "areas";
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+#sign {
+    grid-area: areas;
+}
+#signincontainer:hover {
+    border-radius: 50px;
+}
+#active-sidebar {
+    display: none;
+}
+.close-sidebar {
+    display: flex;
+    max-width: 25px;
+    padding: 10px;
+    padding-left: 0px;
+}
+.fa-solid.fa-table-list {
+    display: block;
+    float: right;
+    margin-right: 10px;
+    margin-left: 10px;
+    background: linear-gradient(45deg, rgb(0, 8, 255), rgb(255, 0, 242), rgb(255, 0, 72));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transform: scale(1.3);
+}
+.fa-solid.fa-table-list:hover {
+    background: linear-gradient(45deg, rgb(100, 105, 255), rgb(255, 100, 247), rgb(255, 100, 144));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#active-sidebar:checked ~ .listcontainer {
+    right: 0px;
+}
+#active-sidebar:checked ~ .open-sidebar {
+    visibility: hidden;
+}
+.listcontainer {
+    display: flex;
+    background-color: hsla(0, 0%, 0%, 0.7);
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(45deg, rgb(0, 8, 255), rgb(255, 0, 242), rgb(255, 0, 72)) 1;
+    justify-self: end;
+    flex-direction: column;
+    position: fixed;
+    top: 13px;
+    right: -241px;
+    height: 21em;
+    width: 15em;
+    transition: all 0.75s ease-out;
+}   
+.listitem {
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(45deg, rgb(0, 8, 255), rgb(255, 0, 242), rgb(255, 0, 72)) 1;
+    display: flex;
+    align-items: center;
+    height: 3.5em;
+    color: #fff;
+    padding-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.listitem a {
+    text-decoration: none;
+    color: #fff;
+}
+.listitem:hover {
+    background: linear-gradient(45deg, rgb(0, 8, 255), rgb(255, 0, 242), rgb(255, 0, 72));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.1em;
+
+}
+.main {
+    display: flex;
+    justify-content: center;
+}
+#welcome {
+    background: linear-gradient(45deg, rgb(0, 8, 255), rgb(255, 0, 242), rgb(255, 0, 72));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 10px #9000ff, 0px 0px 20px #ffffff, 0px 0px 30px #9000ff;
+}
+.signinui {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 28em;
+    width: 40em;
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    transform: translate(-20em, -14em);
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    background: linear-gradient(45deg, rgb(0, 8, 255), rgb(255, 0, 242), rgb(255, 0, 72));;
+    color: #fff;
+    font-family: Calibri;
+    text-shadow: 0px 0px 10px #000;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #ff00ee, 0px 0px 10px 1px #9500ff, 0px 0px 10px #000 inset;
+    transition: height 0.5s linear, width 0.5s linear, transform 0.5s linear, 
+    top 0.75s ease, opacity 0.75s ease-in-out;
+
+}
+#exit {
+    display: none;
+}
+#email, #password {
+    width: 15em;
+    box-shadow: 0px 0px 0px 1px;
+}
+#submit, #reset {
+    width: 5em;
+}
+.signitem {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+.exitlb {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 10px;
+}
+#exit:checked ~ .signinui {
+    top: 50vh;
+    opacity: 1;
+}
+#exit:checked ~ .blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+}
+@keyframes moving {
+    from {
+        transform: translateX(15em);
+    }
+    to{
+        transform: translateX(0em);
+    }
+}
+@media (max-width: 700px) {
+    .signinui {
+    height: 14em;
+    width: 20em;
+    transform: translate(-10em, -7em);
+    }
+}
+@media (max-width: 430px) {
+    body {
+        width: 430px;
+    }
+}

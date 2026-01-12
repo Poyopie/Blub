@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ba3e90fe8e.js" crossorigin="anonymous"></script>
+    <title>First Project</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <p id="logo">PoYo</p>
+
+        <ul id="navcontainer">
+            <li class="navitems"><a href="">Home</a></li>
+            <li class="navitems"><a href="">Works</a></li>
+            <li class="navitems"><a href="">Images</a></li>
+            <li class="navitems"><a href="">Animation</a></li>
+        </ul>
+
+        <input type="checkbox" id="active-sidebar">
+        <label for="active-sidebar" class="open-sidebar">
+            <i class="fa-solid fa-table-list"></i>
+        </label>
+
+        <div class="listcontainer">
+            <label for="active-sidebar" class="close-sidebar">
+                <i class="fa-solid fa-table-list"></i>
+            </label>
+            <div class="listitem" id="l1"><a href="">Introduction</a></div>
+            <div class="listitem" id="l2"><a href="">Location</a></div>
+            <div class="listitem" id="l3"><a href="">Contact</a></div>
+            <div class="listitem" id="l4"><a href="">About</a></div>
+            <button id="signincontainer">
+                <label for="exit" id="sign">Sign-in</label>
+            </button>
+        </div>
+    </nav>
+
+        <input type="checkbox" id="exit">   
+        <div class="blur"></div>
+        <form action="index.php" method="POST" class="signinui">
+            <label for="exit" class="exitlb">Exit</label>
+            <div class="signitem">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required minlength="10" maxlength="30">
+                <label for="password">Password:</label>
+                <input type="password" id="password" required minlength="10" maxlength="20">
+                <input type="submit" id="submit">
+                <input type="reset" id="reset">
+            </div>
+        </form>
+
+    <main class="main">
+        <h1 id="welcome">WELCOME TO BLUB BLUB</h1>
+    </main>
+
+    <!--
+    -->
+
+</body>
+</html>
